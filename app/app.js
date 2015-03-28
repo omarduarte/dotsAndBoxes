@@ -1,1 +1,5 @@
-app.js
+(function() {
+
+  window.dotsAndBoxes = {};
+
+})();

@@ -1,1 +1,7 @@
-game.js
+(function() {
+
+  dotsAndBoxes.Game = function() {
+
+  };
+
+})();
