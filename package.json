@@ -1,0 +1,21 @@
+{
+  "name": "dotsAndBoxes",
+  "version": "0.0.0",
+  "description": "Dots and boxes (also known as Boxes, Squares, Paddocks, Pigs in a Pen, Square-it, Dots and Dashes, Dots, Line Game, Smart Dots, Dot Boxing, or, simply, the Dot Game) is a pencil and paper game for two players (or sometimes, more than two) first published in 1889 by ��douard Lucas.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma"
+  },
+  "author": "Omar Duarte",
+  "license": "MIT",
+  "dependencies": {    
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-safari-launcher": "^0.1.1"
+  }
+}
