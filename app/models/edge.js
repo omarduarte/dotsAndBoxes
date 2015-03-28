@@ -16,7 +16,7 @@
 
   Edge.prototype.notify = function() {
     this.observers.forEach(function(action) {
-      action();
+      action(this.player);
     });
   };
 
