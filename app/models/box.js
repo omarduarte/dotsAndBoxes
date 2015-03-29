@@ -26,10 +26,14 @@
   Box.prototype.onClosedEdge = function(player) {    
     this.openEdges--;
     if (this.openEdges === 0) {
-      this.isOpen = false;
-      this.owner = player;
-      this.subject.notifyObservers(this.owner);
+      this.close(player);
     }
+  };
+
+  Box.prototype.close = function(owner) {
+    this.isOpen = false;
+    this.owner = owner;
+    this.subject.notifyObservers(this.owner);
   };
 
   Box.prototype.registerObserver = function(action) {
