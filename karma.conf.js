@@ -15,6 +15,7 @@ module.exports = function(config) {
 
       // app - need to load feature modules first, otherwise app breaks
       'app/app.js',
+      'app/utils/**/*.js',
       'app/models/**/*.js',
        
       // html templatess 

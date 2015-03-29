@@ -32,7 +32,7 @@ describe('Edges that connect dots in boxes', function() {
       actionhasBeenActivated = true;
     };
 
-    edge.register(action);
+    edge.registerObserver(action);
     edge.mark('Player 2');
     expect(actionhasBeenActivated).toBe(true);
   });

@@ -1,27 +1,21 @@
 (function() {
 
   var Edge = function() {
-    this.isMarked = false;
-    this.player   = null;    
-    this.observers = [];
+    this.isMarked  = false;
+    this.player    = null;    
+    this.subject   = new dotsAndBoxes.Observer();
   };
 
   Edge.prototype.mark = function(player) {
     if (!this.isMarked && player) {
       this.player = player;
       this.isMarked  = true;
-      this.notify();
+      this.subject.notifyObservers(player);
     }
   };
 
-  Edge.prototype.notify = function() {
-    this.observers.forEach(function(action) {
-      action(this.player);
-    });
-  };
-
-  Edge.prototype.register = function(action) {
-    this.observers.push(action);
+  Edge.prototype.registerObserver = function(action) {    
+    this.subject.register(action);
   };
 
   dotsAndBoxes.Edge = Edge;
