@@ -8,8 +8,9 @@
     this.boxes = [];
     
     this.createAndPopulateBoxes();
+    this.openBoxes = size * size;
 
-    this.observeBoxes(this.boxes, this.onBoxClose);
+    this.observeBoxes(this.boxes, this.onBoxClose.bind(this));
 
   };
 
@@ -36,14 +37,14 @@
   };
 
   Board.prototype.onBoxClose = function(boxOwner) {
+    this.openBoxes--;
     this.subject.notifyObservers(boxOwner);
   };
 
-  Board.prototype.observeBoxes = function(boxes, action) {
-    var _this = this;
+  Board.prototype.observeBoxes = function(boxes, action) {    
     boxes.forEach(function(rowOfBoxes) {
       rowOfBoxes.forEach(function(box) {
-        box.registerObserver(action.bind(_this));        
+        box.registerObserver(action);
       });
     });
   };

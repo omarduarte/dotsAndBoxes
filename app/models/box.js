@@ -13,7 +13,7 @@
 
     this.owner = null;
     
-    this.observeEdges(edges, this.onClosedEdge);
+    this.observeEdges(edges, this.onClosedEdge.bind(this));
   };
 
   Box.prototype.observeEdges = function(edges, action) {
@@ -33,7 +33,7 @@
   Box.prototype.close = function(owner) {
     this.isOpen = false;
     this.owner = owner;
-    this.subject.notifyObservers(this.owner);
+    this.subject.notifyObservers(owner);
   };
 
   Box.prototype.registerObserver = function(action) {

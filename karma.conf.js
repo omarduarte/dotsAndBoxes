@@ -49,7 +49,7 @@ module.exports = function(config) {
     autoWatch: true,
 
     // start these browsers
-    browsers: ['Chrome', 'Safari'],
+    browsers: ['Chrome'],
 
     // If browser does not capture in given timeout [ms], kill it
     singleRun: false,
