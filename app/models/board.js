@@ -1,4 +1,6 @@
 (function() {
+  
+  "use strict";
 
   var Board = function(size) {
     this.size = size;

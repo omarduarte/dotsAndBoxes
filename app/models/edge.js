@@ -1,5 +1,7 @@
 (function() {
 
+  "use strict";
+
   var Edge = function() {
     this.isMarked  = false;
     this.player    = null;

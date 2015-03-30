@@ -1,5 +1,7 @@
 (function() {
 
+  "use strict";
+
   var Box = function(edges) {
     this.top    = edges[0];
     this.right  = edges[1];

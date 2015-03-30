@@ -1,5 +1,7 @@
 (function() {
 
+  "use strict";
+
   var Player = function(name) {
     this.name  = name;
     this.score = 0;
