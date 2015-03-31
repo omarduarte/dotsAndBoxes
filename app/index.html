@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-  <html>
+<html>
 
-    <head>
-    </head>
+  <head>
+    <link href='styles.css' rel='stylesheet'>
+  </head>
 
-    <body>
-    </body>
+  <body>    
 
-  </html>
-  
+
+    <div class="game-status"></div>
+    
+    <div class="players">
+      <div class="player1">      
+        Player 1 - Score:
+        <span class="score">0</span>
+      </div>
+
+      <div class="player2">      
+        Player 2 - Score: 
+        <span class="score">0</span>
+      </div>
+    </div>
+
+    <div class="board"></div>
+    
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="utils/observerMaker.js"></script>
+    <script src="utils/render.js"></script>
+
+    <script src="models/edge.js"></script>
+    <script src="models/box.js"></script>
+    <script src="models/board.js"></script>
+    <script src="models/player.js"></script>
+    <script src="models/game.js"></script>
+  </body>
+
+</html>

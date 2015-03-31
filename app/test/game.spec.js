@@ -31,9 +31,8 @@ describe('Dots and Boxes game', function() {
       expect(player.score).toBe(0);
       
       player.newTurn();
-      player.makeMove(function() {
-        game.board.boxes[0][0].close(player);
-      }, game.nextTurn.bind(game));
+      game.board.boxes[0][0].close(player);
+      player.makeMove(game.nextTurn.bind(game));
 
       expect(player.score).toBe(1);      
     });
@@ -60,7 +59,7 @@ describe('Dots and Boxes game', function() {
       player.newTurn();
       expect(player.moves).toBe(1);
 
-      player.makeMove(dummyFn, dummyFn);
+      player.makeMove(dummyFn);
       expect(player.moves).toBe(0);
     });    
 
@@ -69,7 +68,7 @@ describe('Dots and Boxes game', function() {
 
       player.newTurn();
       expect(game.currentPlayer).toBe(0);
-      player.makeMove(dummyFn, game.nextTurn.bind(game));
+      player.makeMove(game.nextTurn.bind(game));
       expect(game.currentPlayer).toBe(1);
       
     });
@@ -79,9 +78,8 @@ describe('Dots and Boxes game', function() {
 
       player.newTurn();
       expect(player.moves).toBe(1);
-      player.makeMove(function() {
-        game.board.boxes[0][0].close(player);
-      }, game.nextTurn.bind(game));
+      game.board.boxes[0][0].close(player);
+      player.makeMove(game.nextTurn.bind(game));
 
       expect(game.players[game.currentPlayer]).toBe(player);
       expect(player.moves).toBe(1);
