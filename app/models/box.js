@@ -15,7 +15,7 @@
 
     this.owner = null;
     
-    this.observeEdges(edges, this.onClosedEdge.bind(this));
+    this.observeEdges(edges, this.onClosedEdge);
   };
 
   Box.prototype.observeEdges = function(edges, action) {
